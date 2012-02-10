@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <title>
+        Aquilon
+    </title>
+    <meta charset="${_response_encoding}"/>
+    <script src="@{'/public/js/html5.js'}" type="text/javascript"></script>
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}"/>
+    <link rel="stylesheet/less" type="text/css" href="@{'/public/bootstrap/less/bootstrap.less'}"/>
+    <script src="@{'/public/js/less-1.2.1.min.js'}" type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+    </style>
+
+    <script data-main="/public/js/main.js" src="@{'/public/js/libs/require/require.js'}"></script>
+    <script type="text/javascript">
+        require(['config', 'models/UserModel'], function (Config, UserModel) {
+            var userModel = new UserModel(${userJson.raw()});
+            Config.currentUser = userModel;
+        });
+    </script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">Aquilon</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="content">
+    </div>
+    <footer class="footer">
+        <p style="padding-top:30px;text-align:center;">
+            Aquilon 0.1 &copy;2012 <a href="http://vijaykiran.com">Vijay Kiran</a> - Licensed Under Apache Apache
+            License Version 2.0
+        </p>
+    </footer>
+</div>
+</body>
+</html>
