@@ -42,9 +42,6 @@ define([
             console.log("TODO");
         }
 
-
-
-
     });
 
     return MainView;

@@ -1,6 +1,10 @@
 ## Aquilon
 
-A sample Web SPA (Single Page Application) - Web application built with Backbone.js with Play Framework 1.2.4 as backend.
+A sample Web SPA (Single Page Application) - Web application built with 
+
+* Playframework 1.2.4
+* Backbone.js 0.9.0
+* require.js 
 
 
 ### License
